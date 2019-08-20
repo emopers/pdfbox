@@ -47,7 +47,7 @@ public class TestExtractText extends TestCase
             // Restore stdout
             System.setOut(stdout);
         }
-
+        outBytes.close();
         String result = outBytes.toString("UTF-8");
         assertTrue(result.contains("PDF1"));
         assertTrue(result.contains("PDF2"));
